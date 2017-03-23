@@ -1,3 +1,6 @@
+/*
+permet de gérer un utilisateur
+*/
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
     bcrypt = require('bcrypt'),
@@ -19,7 +22,7 @@ var UserSchema = new Schema({
     profilPicture : {type:String}//date creation, photo, datederniere connexion,admin boolean,creator bollean,mail
 });
 
-UserSchema.pre('save', function(next){ 
+UserSchema.pre('save', function(next){
 	var user = this;
 	// only hash the password if it has been modified (or is new)
 	if (!user.isModified('password')) return next();

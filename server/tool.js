@@ -1,3 +1,6 @@
+/*
+module qui donne accés à des fonctions pour simplifier le code
+*/
 module.exports = {
   sendAnswer: function (res,json) {
     res.send(json);

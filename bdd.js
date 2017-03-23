@@ -1,3 +1,6 @@
+/**
+permet d'initialiser la bdd
+*/
 var MongoClient = require('mongodb').MongoClient;
 var assert = require('assert');
 

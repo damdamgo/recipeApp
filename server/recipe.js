@@ -1,5 +1,9 @@
+/**
+permet de gérer une recette de cuisine
+*/
 var mongoose = require('mongoose'),
 Schema = mongoose.Schema;
+
 var fs = require('fs');
 var tool = require('./tool');
 var lwip = require('lwip');
@@ -98,7 +102,7 @@ RecipeSchema.methods.updateRecipe = function(json,res){
 	if(json.hasOwnProperty('country'))this.country=json.country;
 	if(json.hasOwnProperty('time'))this.time=json.time;
 	if(json.hasOwnProperty('StepNumber'))this.StepNumber=json.StepNumber;
-	if(json.hasOwnProperty('idCategorie'))this.idCategorie=json.idCategorie;	
+	if(json.hasOwnProperty('idCategorie'))this.idCategorie=json.idCategorie;
 	this.modificationDate = new Date();
 	this.save();
 	jsonAnswer = {"code":1,idRecipe:this._id};

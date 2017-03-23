@@ -1,3 +1,6 @@
+/**
+permet de gérer une étape d'une recette
+*/
 var mongoose = require('mongoose'),
 Schema = mongoose.Schema;
 var fs = require('fs');
